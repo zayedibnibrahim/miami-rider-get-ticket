@@ -1,23 +1,23 @@
-[
+var riderData = [
     {
         "id": 1,
-        "veheivle": "Bike",
-        "image": "../src/image/bike.png"
+        "vehicle": "Bike",
+        "image": "https://i.ibb.co/Yf3Y3bp/bike.png"
     },
     {
         "id": 2,
-        "veheivle": "Car",
-        "image": "../src/image/car.png"
+        "vehicle": "Car",
+        "image": "https://i.ibb.co/DRmkRym/car.png"
     },
     {
         "id": 3,
-        "veheivle": "Bus",
-        "image": "../src/image/bus.png"
+        "vehicle": "Bus",
+        "image": "https://i.ibb.co/MRvkbWS/bus.png"
     },
     {
         "id": 4,
-        "veheivle": "Train",
-        "image": "../src/image/train.png"
+        "vehicle": "Train",
+        "image": "https://i.ibb.co/7Gtn6tZ/train.png"
     }
 ]
 

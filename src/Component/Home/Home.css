@@ -1,0 +1,8 @@
+.home-main{
+    background-image: url('../../image/Bg.png');
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 100vh;
+}

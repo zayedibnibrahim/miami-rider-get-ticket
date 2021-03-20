@@ -1,0 +1,21 @@
+.header{
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #8EE0F5;
+}
+.logo-container img{
+    width: 100px;
+}
+.login-btn{
+    background-color: #ee5253;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 12px;
+}
+.nav-bar nav a{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+}

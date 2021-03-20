@@ -1,0 +1,19 @@
+.container{
+    font-family: 'Poppins', sans-serif;
+}
+
+.got-ride-data table tr td img{
+    width: 35px;
+}
+.got-ride-data table{
+    width: 100%;
+}
+.got-ride-data table tr{
+    border: 5px solid rgb(224, 224, 224);
+}
+.got-ride-data table tr td{
+    padding: 10px;
+}
+.destination-search{
+    padding-top: 30px;
+}
