@@ -14,7 +14,6 @@ const RideDetails = () => {
 
     const [showDetails, setShowDetails] = useState(false);
     const handleDestination = (e) => {
-        console.log("clicked")
         setShowDetails(!showDetails)
         e.preventDefault();
     }
@@ -36,24 +35,28 @@ const RideDetails = () => {
                                 <input type="submit" value="Search" />
                             </form> : <div className="got-ride-data">
                                 <table>
-                                    <tr>
-                                        <td><img src={getRide.image} alt="" /></td>
-                                        <td><span>{getRide.vehicle}</span></td>
-                                        <td className="d-flex"><FontAwesomeIcon icon={faUserFriends} /> <h6> 4</h6></td>
-                                        <td><h6>$65</h6></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src={getRide.image} alt="" /></td>
-                                        <td><span>{getRide.vehicle}</span></td>
-                                        <td className="d-flex"><FontAwesomeIcon icon={faUserFriends} /> <h6> 4</h6></td>
-                                        <td><h6>$65</h6></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src={getRide.image} alt="" /></td>
-                                        <td><span>{getRide.vehicle}</span></td>
-                                        <td className="d-flex"><FontAwesomeIcon icon={faUserFriends} /> <h6> 4</h6></td>
-                                        <td><h6>$65</h6></td>
-                                    </tr>
+                                    <thead></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src={getRide.image} alt="" /></td>
+                                            <td><span>{getRide.vehicle}</span></td>
+                                            <td className="d-flex"><FontAwesomeIcon icon={faUserFriends} /> <h6> 4</h6></td>
+                                            <td><h6>$65</h6></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src={getRide.image} alt="" /></td>
+                                            <td><span>{getRide.vehicle}</span></td>
+                                            <td className="d-flex"><FontAwesomeIcon icon={faUserFriends} /> <h6> 4</h6></td>
+                                            <td><h6>$65</h6></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src={getRide.image} alt="" /></td>
+                                            <td><span>{getRide.vehicle}</span></td>
+                                            <td className="d-flex"><FontAwesomeIcon icon={faUserFriends} /> <h6> 4</h6></td>
+                                            <td><h6>$65</h6></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot></tfoot>
                                 </table>
                             </div>
                         }
