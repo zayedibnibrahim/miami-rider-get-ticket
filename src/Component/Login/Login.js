@@ -151,7 +151,7 @@ const Login = () => {
 
     return (
         <div className="container">
-            <div className="custom-signInSignUp w-50 m-auto">
+            <div className="custom-signInSignUp m-auto">
                 <div className="custom-login">
                     <form onSubmit={handleBothForm} className="d-flex flex-column">
                         <h4 style={{ fontWeight: "bold" }}>{!newUser ? "Login" : "Create an account"}</h4>

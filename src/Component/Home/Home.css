@@ -6,3 +6,15 @@
     background-position: bottom center;
     height: 100vh;
 }
+@media (max-width: 500px){
+    .riders{
+        flex-direction: column;
+        text-align: center;
+    }
+    .riders a{
+        margin-bottom: 10px;
+    }
+    .ride-box{
+        padding: 30px;
+    }
+}

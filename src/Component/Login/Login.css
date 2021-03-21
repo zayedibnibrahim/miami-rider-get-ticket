@@ -46,6 +46,7 @@
 }
 .custom-signInSignUp{
     padding: 40px;
+    width: 50%;
 }
 .switchForm{
     color: tomato;
@@ -59,4 +60,12 @@
 .custom-reg{
     border: 1px solid #000;
     padding: 30px;
+}
+@media (max-width: 500px){
+    .custom-signInSignUp{
+        width: 100%;
+    }
+    .social-login-btn{
+        width: 100%;
+    }
 }
