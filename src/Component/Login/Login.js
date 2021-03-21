@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './authConfig'
+import './Login.css'
+import fbLogo from '../../image/fb-btn.png'
+import glBtn from '../../image/google-btn.png'
 import { useHistory, useLocation } from 'react-router';
 import { userContext } from '../../App';
 if (!firebase.apps.length) {
@@ -53,8 +56,12 @@ const Login = () => {
     }
     return (
         <div className="container">
-            <button onClick={facebookLoginHandler}>Facebook</button>
-            <button onClick={googleLoginHandler}>Google</button>
+            
+            <div className="d-flex flex-column social-login-btn">
+                <h6>Or</h6>
+                <button className="social-btn" onClick={facebookLoginHandler}><img src={fbLogo} alt="" /> Continue with Facebook</button>
+                <button className="social-btn" onClick={googleLoginHandler}><img src={glBtn} alt="" /> Continue with Google</button>
+            </div>
         </div>
     );
 };

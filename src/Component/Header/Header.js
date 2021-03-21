@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css'
 import logo from '../../image/logo.png'
 import { Link, useHistory } from 'react-router-dom';
+import { userContext } from '../../App';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
     const history = useHistory();
     const menuLogin = () => {
         history.push('/login')
     }
+    const [isLoggedIn, setIsLoggedIn] = useContext(userContext);
+
+    const { name } = isLoggedIn;
+
     return (
         <div className="header">
             <div className="container">
@@ -21,7 +28,9 @@ const Header = () => {
                             <Link to="/">Blog</Link>
                             <Link to="/">Contact</Link>
 
-                            <button onClick={menuLogin} className="login-btn">Log In</button>
+                            {
+                                name ? <p><FontAwesomeIcon icon={faUser} /> {name}</p> : <button onClick={menuLogin} className="login-btn">Log In</button>
+                            }
                         </nav>
                     </div>
                 </div>

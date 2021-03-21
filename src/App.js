@@ -17,23 +17,23 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState({});
   return (
     <userContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
-    <Router>
-      <Header></Header>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <PrivateRoute path="/ride/:rideKey">
-          <RideDetails></RideDetails>
-        </PrivateRoute>
-        <Route path="/login">
-          <Login></Login>
-        </Route>
-        <Route path="*">
-          <NotFound></NotFound>
-        </Route>
-      </Switch>
-    </Router>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <PrivateRoute path="/ride/:rideKey">
+            <RideDetails></RideDetails>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+        </Switch>
+      </Router>
     </userContext.Provider>
   );
 }
