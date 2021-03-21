@@ -62,9 +62,7 @@ const Login = () => {
         isSignedIn: false,
         name: '',
         email: '',
-        password: '',
-        photo: '',
-        error: '',
+        error: false,
         success: ''
 
     })
@@ -74,7 +72,7 @@ const Login = () => {
         user.updateProfile({
             displayName: name
         }).then(function () {
-            console.log("name updated successfully")
+            console.log("username updated")
         }).catch(function (error) {
             console.log(error)
         });
@@ -89,10 +87,12 @@ const Login = () => {
                     setUser(newUsersInfo)
                     setIsLoggedIn(newUsersInfo);
                     history.replace(from);
-                    console.log(userCredential)
                 })
                 .catch(error => {
-                    console.log(error.code, error.message);
+                    console.log(error.message);
+                    const newUsersInfo = { ...user }
+                    newUsersInfo.error = true;
+                    setUser(newUsersInfo)
                 });
         }
         if (newUser && user.email && user.password) {
@@ -108,7 +108,6 @@ const Login = () => {
                     setIsLoggedIn(newUsersInfo);
 
                     history.replace(from);
-                    console.log(userCredential)
                 })
                 .catch(error => {
                     const errorMessage = error.message;
@@ -127,6 +126,11 @@ const Login = () => {
     const [newUser, setNewUser] = useState(false)
     const switchForm = () => {
         setNewUser(!newUser)
+        const newUsersInfo = { ...user }
+        newUsersInfo.error = false;
+        newUsersInfo.name = '';
+        newUsersInfo.password = '';
+        setUser(newUsersInfo)
     }
 
     //Validator and push to user state
@@ -163,7 +167,11 @@ const Login = () => {
                         <input type="submit" value={!newUser ? "Login" : "Create an account"} />
                     </form>
                     <p>{!newUser ? "Don't have an account?" : "Already have an account?"} <span className="switchForm" onClick={switchForm}>{!newUser ? "Create an account" : "Login"}</span></p>
-                    
+
+                    {
+                        user.error &&   <p style={{color: 'red', fontWeight: 'bold'}}>Invalid Email And Password</p>
+                    }
+                        
                 </div>
             </div>
             <div className="d-flex flex-column social-login-btn">

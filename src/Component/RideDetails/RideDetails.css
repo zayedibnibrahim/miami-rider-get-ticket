@@ -9,7 +9,7 @@
     width: 100%;
 }
 .got-ride-data table tr{
-    border: 5px solid rgb(224, 224, 224);
+    border: 5px solid tomato
 }
 .got-ride-data table tr td{
     padding: 10px;
