@@ -163,6 +163,10 @@ const Login = () => {
                         <input type="submit" value={!newUser ? "Login" : "Create an account"} />
                     </form>
                     <p>{!newUser ? "Don't have an account?" : "Already have an account?"} <span className="switchForm" onClick={switchForm}>{!newUser ? "Create an account" : "Login"}</span></p>
+                    {
+                        !user.success && <p style={{color: "red"}}>Invalid Email and Password</p>
+                    }
+                    
                 </div>
             </div>
             <div className="d-flex flex-column social-login-btn">

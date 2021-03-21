@@ -13,7 +13,9 @@ const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useContext(userContext);
 
     const { name, email } = isLoggedIn;
-
+    const logoutHandler = () => {
+        setIsLoggedIn({});
+    }
     return (
         <div className="header">
             <div className="container">
@@ -29,7 +31,7 @@ const Header = () => {
                             <Link to="/">Contact</Link>
 
                             {
-                                name || email ? <p><FontAwesomeIcon icon={faUser} /> {name}</p> : <button onClick={menuLogin} className="login-btn">Log In</button>
+                                name || email ? <p><FontAwesomeIcon icon={faUser} /> {name} <span onClick={logoutHandler} className="logout-btn">| Logout</span></p> : <button onClick={menuLogin} className="login-btn">Log In</button>
                             }
                         </nav>
                     </div>
